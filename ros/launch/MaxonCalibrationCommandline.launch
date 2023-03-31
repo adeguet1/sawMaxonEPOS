@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="maxon_config_file" default="$(find snake)/config/maxonSetupSnakeRollBendREV1.json"/>
+    <arg name="polaris_config_file" default="/home/golchehr/bigss/catkin_ws/src/snake/config/saw_ndi_track_config.json"/>
+
+    <include file="$(dirname)/inc/startMaxon.xml">
+        <arg name="maxon_config_file" value="$(arg maxon_config_file)"/>
+        <arg name="velocity_mode" value="0"/>
+        <arg name="show_UI" value="0"/>
+    </include>
+
+    <node pkg="snake" type="motor_control.py" name="motor_control" output="screen"/>
+
+    <node pkg="ndi_tracker_ros" type="ndi_tracker" name="ndi_tracker" output="screen" args=
+       "-j $(arg polaris_config_file)">
+    </node>
+
+</launch>

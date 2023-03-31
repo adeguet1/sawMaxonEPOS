@@ -46,7 +46,7 @@ if (cisst_FOUND_AS_REQUIRED)
   endif ()
 
   # find EPOS library, installer also create a link in /usr/lib
-  set (KNOWN_VERSIONS 6.6.2.0)
+  set (KNOWN_VERSIONS 6.6.2.0 6.8.1.0)
   set (EPOS_SEARCH_PATH "")
   foreach (vers ${KNOWN_VERSIONS})
     set (EPOS_SEARCH_PATH "${EPOS_SEARCH_PATH}" "/opt/EposCmdLib_${vers}")
