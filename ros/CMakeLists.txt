@@ -63,16 +63,16 @@ if (cisst_FOUND)
     include_directories (${sawMaxonEPOS_INCLUDE_DIR} ${maxon_motor_ros_SOURCE_DIR})
     link_directories (${sawMaxonEPOS_LIBRARY_DIR})
 
-    add_executable (maxon_motor main_MaxonMotorWithUI.cpp)
+    add_executable (startMaxonWithUI main_MaxonMotorWithUI.cpp)
 
     # link against non cisst libraries and saw components
-    target_link_libraries (maxon_motor
+    target_link_libraries (startMaxonWithUI
       ${sawMaxonEPOS_LIBRARIES}
       ${sawMaxonEPOSQt_LIBRARIES}
       ${catkin_LIBRARIES})
 
     # link against cisst libraries (and dependencies)
-    cisst_target_link_libraries (maxon_motor ${REQUIRED_CISST_LIBRARIES})
+    cisst_target_link_libraries (startMaxonWithUI ${REQUIRED_CISST_LIBRARIES})
 
   endif (sawMaxonEPOS_FOUND)
 
