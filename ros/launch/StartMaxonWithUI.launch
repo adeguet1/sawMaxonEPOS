@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="maxon_config_file" default="$(find saw_maxon_epos_config)/maxonSetupSnakeRollBendREV1.json"/>
+    <arg name="velocity_mode" default="0"/>
+
+    <include file="$(dirname)/inc/startMaxon.xml">
+        <arg name="maxon_config_file" value="$(arg maxon_config_file)"/>
+        <arg name="velocity_mode" value="$(arg velocity_mode)"/>
+        <arg name="show_UI" value="1"/>
+    </include>
+
+</launch>

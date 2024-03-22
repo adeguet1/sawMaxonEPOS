@@ -1,0 +1,12 @@
+{
+    "motors": [
+        {"file": "maxon_466087.json",
+         "nodeId": 1, 
+         "taskName": "bendright"},
+	{"file": "maxon_466087.json",
+         "nodeId": 3, 
+         "taskName": "bendleft"}
+    ]
+}
+
+
